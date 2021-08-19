@@ -23,16 +23,10 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B test -P coverage --no-transfer-progress
-
-    - name: npm install, make test-coverage
-      run: |
-        npm install
-        make test-coverage
-
-    - name: Coveralls
-        # You may pin to the exact commit or the version.
-        # uses: coverallsapp/github-action@9ba913c152ae4be1327bfb9085dc806cedb44057
-      uses: coverallsapp/github-action@v1.1.0
+    - name: Codacy Coverage Reporter
+      # You may pin to the exact commit or the version.
+      # uses: codacy/codacy-coverage-reporter-action@31721d7c5d2357955879f3ecbae83bf199c16000
+      uses: codacy/codacy-coverage-reporter-action@v1.1.0
       with:
-        github-token: ${{secrets.github_token}}
-        #path-to-lcov: ./cov/lcov.info
+        # API project token to retrieve your remote Codacy configuration for the project being analyzed
+        project-token: ${{secrets.CODACY_PROJECT_TOKEN}}
