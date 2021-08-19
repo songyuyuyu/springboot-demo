@@ -1,10 +1,10 @@
 language: java
+
 jdk:
   - oraclejdk11
+dist:
+  trusty
 
-before_script:
-
-before_install:
 
 script:
   echo "skip test...."
@@ -15,3 +15,34 @@ after_success:
 branches:
   only:
     - main
+
+env:
+  global:
+    # COVERITY_SCAN_TOKEN
+    # ** specific to your project **
+    - secure: "BZ5aKdIPRoUyOnfAP8iwVYDG5rUhfhXfcZHhaPu0u04YDWtmcpsXtc3+ZJLkwQP+u2dSGaCbLFZXh87BoNYsd4pGvBSL1kXrsencUU8FJZUUHYQnmThVXzBlQidOU4cLvgVTii2cXsR3n6rs07b5KbWsGOrVjHFaReFRWv1X46Fnr8VgFrJQS8P1ZWGYj+2ZEZy586TVtLCeQs9MrVw/Oqh+zw00ehoi6LlPwbpFbzsh4KQiLm6yLuuxbgqKymCgzWYvrs168/2abRq9WptYOZrF4gyNtqeAJOv1+vlmhCzcpjJrsTzgSZAN5kvTiklXjyGAGAGXa3DKiXiCIsOuHmMZy1xY+6xII8V951wp/WmjGHRsTCtjuqhmBA+VntXnqVFfZBzHKrK55QFbrgfuaLY45lbhrqd5/XsvjTrdsILJK9Q/gtM6xNl4F6BbYWhHtyTHn9eHajxy5XwIB6UqZXMkeQHIsTlCM83OZrKEoXJR+QPHE9tnYT4b7bNyU+7PAgIkVb1MiScK0u5ZLwB8Rstf/QznQBA+K22x82rqzQgBSZbfW66RtMspvwyU+RL0brE9xI13fHv91yOi9piiC7Wb0GcSxO8nY/ktKeKAsNV6UJNcMU1H/gyiid5W2it5JcOI0eDDGvF75j6wm9WPuAGK0SkdVpDapZKhoA/lEyY="
+    - "MAVEN_OPTS=-Xmx2g"
+
+addons:
+  coverity_scan:
+  # GitHub project metadata
+  # ** specific to your project **
+    project:
+      name: songyuyuyu/springboot
+      version: 1.0
+      description: MY Project
+    # Where email notification of build analysis results will be sent
+    notification_email: song_yu@trip.com
+
+    # Commands to prepare for build_command
+    # ** likely specific to your build **
+    build_command_prepend: mvn clean
+
+    # The command that will be added as an argument to "cov-build" to compile your project for analysis,
+    # ** likely specific to your build **
+    build_command: "mvn -DskipTests=true compile"
+
+    # Pattern to match selecting branches that will run analysis. We recommend leaving this set to 'coverity_scan'.
+    # Take care in resource usage, and consider the build frequency allowances per
+    #   https://scan.coverity.com/faq#frequency
+    branch_pattern: coverity_scan
