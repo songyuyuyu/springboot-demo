@@ -11,6 +11,8 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <java.version>1.8</java.version>
+        <!-- Testcoverage analysis -->
+        <build-plugin.jacoco.version>0.8.7</build-plugin.jacoco.version>
     </properties>
     <dependencies>
         <dependency>
@@ -19,5 +21,36 @@
             <version>1.4.3.RELEASE</version>
         </dependency>
     </dependencies>
+    <profiles>
+        <profile>
+            <id>coverage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>${build-plugin.jacoco.version}</version>
+                        <executions>
+                            <!-- Prepares the property pointing to the JaCoCo runtime agent
+                            which is passed as VM argument when Maven the Surefire plugin is executed. -->
+                            <execution>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                            <!-- Ensures that the code coverage report is created after
+                            all tests have been run. -->
+                            <execution>
+                                <id>generate-report</id>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
