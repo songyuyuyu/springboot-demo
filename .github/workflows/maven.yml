@@ -29,7 +29,7 @@ jobs:
       with:
         github-token: ${{github.token}}
         # Path to lcov file
-        path-to-lcov: ./coverage/lcov.info
+        #path-to-lcov: ./coverage/lcov.info
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
