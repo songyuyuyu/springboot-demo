@@ -14,8 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      codecov:
-        token: 4d4507f9-307b-4e47-9c0a-2efa257fd569
+      CODECOV_TOKEN: 4d4507f9-307b-4e47-9c0a-2efa257fd569
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 8
