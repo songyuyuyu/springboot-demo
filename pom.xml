@@ -14,6 +14,7 @@
         <!-- Testcoverage analysis -->
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <build-plugin.jacoco.version>0.8.6</build-plugin.jacoco.version>
+
     </properties>
     <dependencies>
         <dependency>
