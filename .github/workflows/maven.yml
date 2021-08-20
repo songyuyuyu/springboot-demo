@@ -33,8 +33,9 @@ jobs:
         #file: ${{ github.workspace }}/**/target/site/jacoco/jacoco.xml
         name: codecov
 
+
     - name: Build with Maven
-      run: mvn -B test -P coverage --no-transfer-progress
+      run: mvn -B test -P coverage --no-transfer-progress cobertura:cobertura
 
 
 
