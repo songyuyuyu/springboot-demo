@@ -27,7 +27,7 @@ jobs:
     - name: codecov
       uses: codecov/codecov-action@v2.0.2
       with:
-        file: ./jacoco.xml
-        #file: ./**/target/site/jacoco/jacoco.xml
+        #file: ./jacoco.xml
+        file: ${{ github.workspace }}/**/target/site/jacoco/jacoco.xml
         name: codecov
 
