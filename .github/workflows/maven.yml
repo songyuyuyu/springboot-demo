@@ -31,3 +31,4 @@ jobs:
         file: ${{ github.workspace }}/**/target/site/jacoco/jacoco.xml
         name: codecov
 
+
