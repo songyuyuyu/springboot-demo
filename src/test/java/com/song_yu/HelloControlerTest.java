@@ -14,10 +14,10 @@ public class HelloControlerTest extends TestApplication {
     @Autowired
     HelloController helloController;
 
-    @Test
-    public void test(){
-        helloController.hello();
-
-//        Assert.assertSame("Hello, SpringBoot", helloController.hello());
-    }
+//    @Test
+//    public void test(){
+//        helloController.hello();
+//
+////        Assert.assertSame("Hello, SpringBoot", helloController.hello());
+//    }
 }
