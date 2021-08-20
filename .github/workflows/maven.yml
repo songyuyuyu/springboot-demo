@@ -27,7 +27,7 @@ jobs:
     - name: codecov
       uses: codecov/codecov-action@v2.0.2
       with:
-        #file: ./**/target/site/jacoco/jacoco.xml
+        file: ./jacoco.xml
         name: codecov
 
     - name: npm install
