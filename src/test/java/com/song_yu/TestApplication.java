@@ -28,6 +28,11 @@ public class TestApplication {
         testservice.getMessage(true);
     }
 
+    @Test
+    public void test2(){
+        testservice.getMessage(false);
+    }
+
     @Before
     public void init() {
         System.out.println("¿ªÊ¼²âÊÔ-----------------");
