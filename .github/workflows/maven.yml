@@ -35,13 +35,13 @@ jobs:
     - name: codecov
       uses: codecov/codecov-action@v2.0.1
       with:
-        #file: ./jacoco.xml
+        file: ./jacoco.xml
         #token: ${{secrets.CODECOV_TOKEN}}
         #file: ${{ github.workspace }}/**/target/site/jacoco/jacoco.xml
         #name: codecov
 
-    - name: Upload coverage to codecov
-      run: curl -s https://codecov.io/bash | bash
+    #- name: Upload coverage to codecov
+    #  run: curl -s https://codecov.io/bash | bash
 
 
 
