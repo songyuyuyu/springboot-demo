@@ -45,7 +45,7 @@ jobs:
         #name: codecov
 
     - name: find files
-      run: ls -al target/cobertura
+      run: ls -al target/site/cobertura
       
     - name: Upload coverage to codecov
       run: curl -s https://codecov.io/bash | bash
