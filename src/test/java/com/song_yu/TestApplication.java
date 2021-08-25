@@ -26,13 +26,13 @@ public class TestApplication {
     Testservice testservice;
     @Test
     public void test(){
-        testservice.getMessage(true);
+        System.out.println(testservice.getMessage(true));
         Assert.assertEquals(1, 1);
     }
 
     @Test
     public void test2(){
-        testservice.getMessage(false);
+        System.out.println(testservice.getMessage(false));
         Assert.assertEquals(1, 1);
     }
 
