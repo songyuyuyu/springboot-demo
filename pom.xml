@@ -13,6 +13,8 @@
         <java.version>1.8</java.version>
         <!-- Testcoverage analysis -->
         <build-plugin.jacoco.version>0.8.6</build-plugin.jacoco.version>
+        <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
+
 
     </properties>
     <dependencies>
@@ -33,6 +35,11 @@
             <id>coverage</id>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>org.eluder.coveralls</groupId>
+                        <artifactId>coveralls-maven-plugin</artifactId>
+                        <version>${coveralls-maven-plugin.version}</version>
+                    </plugin>
                     <plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
