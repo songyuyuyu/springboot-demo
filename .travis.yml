@@ -9,7 +9,7 @@ dist:
 script:
   echo "skip test...."
 install:
-  - mvn package -Dmaven.javadoc.skip=true
+  - mvn install  -P coverage --no-transfer-progress cobertura:cobertura
 
 after_success:
   - mvn -Dlog.console.close=true  clean generate-resources cobertura:cobertura coveralls:report
