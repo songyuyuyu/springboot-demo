@@ -3,6 +3,7 @@ package com.song_yu;
 import com.song_yu.controller.HelloController;
 import com.song_yu.service.Testservice;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,11 +27,13 @@ public class TestApplication {
     @Test
     public void test(){
         testservice.getMessage(true);
+        Assert.assertEquals(1, 1);
     }
 
     @Test
     public void test2(){
         testservice.getMessage(false);
+        Assert.assertEquals(1, 1);
     }
 
     @Before
