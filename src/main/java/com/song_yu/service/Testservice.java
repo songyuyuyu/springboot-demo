@@ -17,4 +17,13 @@ public class Testservice implements com.song_yu.service.Service {
         }
     }
 
+    @Override
+    public int getId(boolean conA, boolean conB, boolean conC) {
+        if(conA || conB || conC){
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
 }

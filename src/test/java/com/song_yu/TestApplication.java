@@ -36,7 +36,19 @@ public class TestApplication {
         Assert.assertEquals(1, 1);
     }
 
-    @Before
+    @Test
+    public void test3() {
+        System.out.println(testservice.getId(true, false, false));
+        Assert.assertEquals(1, 1);
+    }
+
+    @Test
+    public void test4() {
+        System.out.println(testservice.getId(false, false, false));
+        Assert.assertEquals(1, 1);
+    }
+
+        @Before
     public void init() {
         System.out.println("¿ªÊ¼²âÊÔ-----------------");
     }

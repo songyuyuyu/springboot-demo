@@ -6,4 +6,5 @@ package com.song_yu.service;
  */
 public interface Service {
     String getMessage(boolean bigger);
+    int getId(boolean conA, boolean conB, boolean conC);
 }
