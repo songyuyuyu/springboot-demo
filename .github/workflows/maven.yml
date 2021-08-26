@@ -47,6 +47,7 @@ jobs:
     - name: find files
       run: |
         ls -al target/site/cobertura
+        cat target/site/coverage.xml
 #        ls -al target/site/jacoco
 #        cat target/site/jacoco/jacoco.xml
 #        cat target/site/jacoco/index.html
