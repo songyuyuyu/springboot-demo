@@ -44,8 +44,8 @@ jobs:
         file: ${{ github.workspace }}/**/target/site/jacoco/jacoco.xml
         #name: codecov
 
-   # - name: find files
-   #   run: ls -al target/site/cobertura
+    - name: find files
+      run: ls -al target/site/jacoco
       
     - name: Upload coverage to codecov
       run: curl -s https://codecov.io/bash | bash
