@@ -12,7 +12,7 @@ install:
   - mvn install -Dmaven.javadoc.skip=true
 
 after_success:
-  - mvn -Dlog.console.close=true  clean generate-resources cobertura:cobertura
+  - mvn -Dlog.console.close=true  clean generate-resources
 
 branches:
   only:
