@@ -48,7 +48,7 @@ jobs:
       run: |
         ls -al target/site/jacoco
         cat target/site/jacoco/index.html
-        cat target/site/jacoco/acoco-sessions.html
+        cat target/site/jacoco/jacoco-sessions.html
         cat target/site/jacoco/jacoco.csv
         cat target/site/jacoco/jacoco.xml
 
