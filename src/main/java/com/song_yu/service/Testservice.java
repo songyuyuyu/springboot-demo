@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
  * @date:
  */
 @Service
-public class Testservice {
+public class Testservice implements com.song_yu.service.Service {
+    @Override
     public String getMessage(boolean bigger){
         if(bigger){
             return "Hello world";
