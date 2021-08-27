@@ -2,6 +2,7 @@ package com.song_yu;
 
 import com.song_yu.controller.HelloController;
 import com.song_yu.service.Testservice;
+import com.song_yu.test.StaticTest;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -45,6 +46,11 @@ public class TestApplication {
     @Test
     public void test4() {
         System.out.println(testservice.getId(false, false, false));
+        Assert.assertEquals(1, 1);
+    }
+
+    public void test5(){
+        System.out.println(StaticTest.getStaticMessage(false));
         Assert.assertEquals(1, 1);
     }
 
