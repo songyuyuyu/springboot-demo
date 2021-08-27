@@ -54,7 +54,7 @@ public class TestApplication {
         Assert.assertEquals(1, 1);
     }
 
-        @Before
+    @Before
     public void init() {
         System.out.println("¿ªÊ¼²âÊÔ-----------------");
     }
