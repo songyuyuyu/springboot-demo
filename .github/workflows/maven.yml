@@ -33,7 +33,7 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
 
     - name: Build with Maven
-      run: mvn install  -P coverage --no-transfer-progress
+      run: mvn install  -P coverage --no-transfer-progress  cobertura:cobertura
 
     - name: codecov
       uses: codecov/codecov-action@v2.0.1
@@ -46,11 +46,10 @@ jobs:
 
     - name: find files
       run: |
-        ls -al target/site/jacoco
-        cat target/site/jacoco/jacoco.xml
-  #      ls -al target/site/cobertura
-  #      cat target/site/cobertura/coverage.xml
-
+        ls -al target/site/cobertura
+        cat target/site/cobertura/coverage.xml
+#             ls -al target/site/jacoco
+#             cat target/site/jacoco/jacoco.xml
 #        cat target/site/jacoco/index.html
 #        cat target/site/jacoco/jacoco-sessions.html
 #        cat target/site/jacoco/jacoco.csv
