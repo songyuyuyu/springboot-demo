@@ -1,9 +1,9 @@
 package com.song_yu;
 
 import com.song_yu.controller.HelloController;
+import com.song_yu.dao.AbstractDemoImpl;
+import com.song_yu.dao.StaticDemo;
 import com.song_yu.service.Testservice;
-import com.song_yu.testdao.AbstractTest;
-import com.song_yu.testdao.StaticTest;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -28,7 +28,7 @@ public class TestApplication {
     Testservice testservice;
 
     @Autowired
-    AbstractTest abstractTest;
+    AbstractDemoImpl abstractDemo;
     @Test
     public void test(){
         System.out.println(testservice.getMessage(true));
@@ -55,13 +55,13 @@ public class TestApplication {
 
     @Test
     public void test5(){
-        System.out.println(StaticTest.getStaticMessage(false));
+        System.out.println(StaticDemo.getStaticMessage(false));
         Assert.assertEquals(1, 1);
     }
 
     @Test
     public void test6(){
-        System.out.println(abstractTest.getAbstract(true));
+        System.out.println(abstractDemo.getAbstract(true));
         Assert.assertEquals(1, 1);
     }
     @Before

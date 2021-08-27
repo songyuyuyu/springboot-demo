@@ -1,6 +1,5 @@
-package com.song_yu.testdao;
+package com.song_yu.dao;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,7 +7,7 @@ import org.springframework.stereotype.Service;
  * @date:
  */
 @Service
-public class AbstractTestImpl extends AbstractTest {
+public class AbstractDemoImpl extends AbstractDemo {
     @Override
     public String getAbstract(boolean con) {
         if(con){

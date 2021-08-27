@@ -1,9 +1,9 @@
-package com.song_yu.testdao;
+package com.song_yu.dao;
 
 /**
  * @author:
  * @date:
  */
-public abstract class AbstractTest {
+public abstract class AbstractDemo {
     abstract public String getAbstract(boolean con);
 }
