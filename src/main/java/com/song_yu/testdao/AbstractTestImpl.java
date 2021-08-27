@@ -1,10 +1,14 @@
-package com.song_yu.test;
+package com.song_yu.testdao;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 
 /**
  * @author:
  * @date:
  */
-public class AbstractTestImpl extends AbstractTest{
+@Service
+public class AbstractTestImpl extends AbstractTest {
     @Override
     public String getAbstract(boolean con) {
         if(con){

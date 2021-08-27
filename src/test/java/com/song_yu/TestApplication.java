@@ -2,7 +2,8 @@ package com.song_yu;
 
 import com.song_yu.controller.HelloController;
 import com.song_yu.service.Testservice;
-import com.song_yu.test.StaticTest;
+import com.song_yu.testdao.AbstractTest;
+import com.song_yu.testdao.StaticTest;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -25,6 +26,9 @@ public class TestApplication {
 
     @Autowired
     Testservice testservice;
+
+    @Autowired
+    AbstractTest abstractTest;
     @Test
     public void test(){
         System.out.println(testservice.getMessage(true));
@@ -49,11 +53,17 @@ public class TestApplication {
         Assert.assertEquals(1, 1);
     }
 
+    @Test
     public void test5(){
         System.out.println(StaticTest.getStaticMessage(false));
         Assert.assertEquals(1, 1);
     }
 
+    @Test
+    public void test6(){
+        System.out.println(abstractTest.getAbstract(true));
+        Assert.assertEquals(1, 1);
+    }
     @Before
     public void init() {
         System.out.println("¿ªÊ¼²âÊÔ-----------------");
