@@ -17,7 +17,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-//ÓÉÓÚÊÇWebÏîÄ¿£¬JunitĞèÒªÄ£ÄâServletContext£¬Òò´ËÎÒÃÇĞèÒª¸øÎÒÃÇµÄ²âÊÔÀà¼ÓÉÏ@WebAppConfiguration¡£
+//ç”±äºæ˜¯Webé¡¹ç›®ï¼ŒJunitéœ€è¦æ¨¡æ‹ŸServletContextï¼Œå› æ­¤æˆ‘ä»¬éœ€è¦ç»™æˆ‘ä»¬çš„æµ‹è¯•ç±»åŠ ä¸Š@WebAppConfigurationã€‚
 @WebAppConfiguration
 public class TestApplication {
 
@@ -56,7 +56,7 @@ public class TestApplication {
     @Test
     public void test5(){
         System.out.println(StaticDemo.getStaticMessage(false));
-        Assert.assertEquals(1, 1);
+        Assert.assertEquals(1, 0);
     }
 
     @Test
@@ -66,11 +66,11 @@ public class TestApplication {
     }
     @Before
     public void init() {
-        System.out.println("¿ªÊ¼²âÊÔ-----------------");
+        System.out.println("å¼€å§‹æµ‹è¯•-----------------");
     }
 
     @After
     public void after() {
-        System.out.println("²âÊÔ½áÊø-----------------");
+        System.out.println("æµ‹è¯•ç»“æŸ-----------------");
     }
 }
