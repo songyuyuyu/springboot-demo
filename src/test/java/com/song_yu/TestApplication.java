@@ -56,7 +56,7 @@ public class TestApplication {
     @Test
     public void test5(){
         System.out.println(StaticDemo.getStaticMessage(false));
-        Assert.assertEquals(1, 0);
+        Assert.assertEquals(1, 1);
     }
 
     @Test

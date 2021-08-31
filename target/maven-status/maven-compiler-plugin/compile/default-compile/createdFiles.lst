@@ -1,5 +1,7 @@
 com/song_yu/dao/StaticDemo.class
 com/song_yu/dao/AbstractDemoImpl.class
 com/song_yu/service/Service.class
+com/song_yu/controller/HelloController.class
+com/song_yu/Application.class
 com/song_yu/dao/AbstractDemo.class
 com/song_yu/service/Testservice.class
