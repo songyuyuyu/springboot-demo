@@ -33,7 +33,7 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
 
     - name: Build with Maven
-      run: mvn install  -P coverage --no-transfer-progress  cobertura:cobertura
+      run: mvn install  -P coverage --no-transfer-progress
 
     - name: codecov
       uses: codecov/codecov-action@v2.0.1
