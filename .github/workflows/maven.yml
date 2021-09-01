@@ -45,11 +45,11 @@ jobs:
         #name: codecov
 
     - name: find files
-      run: |
-        ls -al target/site/cobertura
-        cat target/site/cobertura/coverage.xml
-#             ls -al target/site/jacoco
-#             cat target/site/jacoco/jacoco.xml
+      run: |         
+         ls -al target/site/jacoco
+         cat target/site/jacoco/jacoco.xml
+#        ls -al target/site/cobertura
+#        cat target/site/cobertura/coverage.xml
 #        cat target/site/jacoco/index.html
 #        cat target/site/jacoco/jacoco-sessions.html
 #        cat target/site/jacoco/jacoco.csv
