@@ -30,11 +30,8 @@ xpipe 提供两种启动方式
   	2.进入redis/dockerPackage目录，然后运行 start-xpipe-container-local.sh脚本
   	如：bash start-xpipe-container-local.sh console-proxy
   	参数代表启动的模式：
-  
   		1.默认： console+metaserver+keepercontainer
-  
   		2.console-checker：console+checker+metaserver+keepercontainer
-  		
         3.console-proxy: console+metaserver+keepercontainer+proxy
   	注意:
   		运行模式1或2的时候，需要将mysql中初始化数据（init_data）中的route_tbl及proxy_tbl信息删除
