@@ -20,9 +20,8 @@ xpipe 提供两种启动方式
 
 注意
 
-ctripcorp/xpipe-mysql:latest 支持proxy模式
-
-ctripcorp/xpipe-mysql:2.0 支持非proxy模式
+        ctripcorp/xpipe-mysql:latest 支持proxy模式
+        ctripcorp/xpipe-mysql:2.0 支持非proxy模式
 
 - 方式二：根据最新代码编译本地镜像再启动
 
@@ -38,7 +37,6 @@ ctripcorp/xpipe-mysql:2.0 支持非proxy模式
   		
         3.console-proxy: console+metaserver+keepercontainer+proxy
   	注意:
-  
   		运行模式1或2的时候，需要将mysql中初始化数据（init_data）中的route_tbl及proxy_tbl信息删除
 
 <a name="验证"></a>
